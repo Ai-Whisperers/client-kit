@@ -1,7 +1,12 @@
-export { Header } from './components/header';
-export { Footer } from './components/footer';
-export { WhatsappFloat } from './components/whatsapp-float';
-export { MobileCta } from './components/mobile-cta';
-export { CtaBanner } from './components/cta-banner';
-export { CookieConsent } from './components/cookie-consent';
-export { ProcessSection } from './components/process-section';
+export * from "./types"
+export { STORAGE_KEYS, COOKIE_KEYS } from "./storage/keys"
+export { Analytics, trackEvent } from "./analytics"
+export { JsonLd, storeSchema, faqSchema, articleSchema, breadcrumbSchema, productSchema } from "./seo"
+export { ErrorBoundary } from "./ui/error-boundary"
+export { WhatsAppFloat } from "./ui/whatsapp-float"
+export { Skeleton, ProductCardSkeleton } from "./ui/skeleton"
+export { LoadingBar } from "./ui/loading-bar"
+export { registerGateway, getGateway, getRegisteredGateways } from "./payment"
+export type { PaymentRequest, GatewayResult, GatewayAdapter } from "./payment"
+export { crud, createCrudRoutes } from "./db"
+export type { CartItem, SiteContent } from "./types"
